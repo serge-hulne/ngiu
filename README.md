@@ -65,11 +65,11 @@ type FormData struct {
 
 func (f *FormData) FormDataLayout() giu.Layout {
 	return giu.Layout{
-		// Name
+		// Service
 		giu.Label("Service:"),
 		giu.InputText(&f.Service).Hint("Enter a service name"),
 		giu.Dummy(0, 10),
-		// Age
+		// Password
 		giu.Label("Password:"),
 		giu.InputText(&f.Pwd).Hint("Enter a password"),
 		// Action
