@@ -90,3 +90,25 @@ func (widget *Widget) FontWeight(weight string) *Widget {
 		To(widget.Widget),
 	)
 }
+
+// Status bar
+// TODO : put in lib (ngiu)
+func StatusBar(text string, height float32) giu.Widget {
+	// Approximate height of the status label
+
+	// Spacer to dynamically push the status label to the bottom
+	spacer := giu.Custom(func() {
+		_, availableHeight := giu.GetAvailableRegion()
+		giu.Dummy(0, availableHeight-height).Build()
+	})
+
+	// Status label at the bottom
+	statusLabel := n.NewWidget(giu.Label(text)).
+		BackgroundColor(n.NewColorByName(n.ColorNames.Basic.Blue)).
+		ForegroundColor(n.NewColorByName(n.ColorNames.Vivid.Lime)).
+		FontWeight("bold").
+		PaddingTop(10)
+
+	return giu.Layout{spacer, statusLabel}
+}
+
