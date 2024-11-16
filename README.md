@@ -4,7 +4,6 @@ A SwiftUI inspired GUI library for go, based on giu
 
 # Example of use:
 
-```
 // ############################################
 // ### Custom FormData with data input handling
 // ############################################
@@ -12,7 +11,9 @@ A SwiftUI inspired GUI library for go, based on giu
 package main
 
 import (
-	. "github.com/serge-hulne/ngiu"
+	"fmt"
+
+	n "github.com/serge-hulne/ngiu"
 
 	"github.com/AllenDang/giu"
 )
@@ -30,26 +31,14 @@ func main() {
 
 func loop() {
 	giu.SingleWindow().Layout(
-		VStack(
+		n.VStack(
 			giu.Label("Enter a new service / password combination"),
-
 			// Main widget
-			NewWidget(formData.FormDataLayout()).
+			n.NewWidget(formData.FormDataLayout()).
 				PaddingTop(10).
 				PaddingLeft(50),
-
-			// Flexible spacer to push items below it to the bottom
-			giu.Custom(func() {
-				_, height := giu.GetAvailableRegion()
-				giu.Dummy(0, height-30).Build() // Adjust height to control space
-			}),
-
-			// Status label at the bottom
-			NewWidget(giu.Label("Status: OK")).
-				BackgroundColor(NewColorByName(ColorNames.Basic.Blue)).
-				ForegroundColor(NewColorByName(ColorNames.Vivid.Lime)).
-				FontWeight("bold").
-				PaddingTop(10),
+			// Status bar
+			n.StatusBar("Status : OK", 30),
 		),
 	)
 }
@@ -94,5 +83,8 @@ func (f *FormData) FormDataSubmit() {
 	}
 	giu.Update()
 }
+
+//
+```
 ```
 
