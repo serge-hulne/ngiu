@@ -103,9 +103,9 @@ func StatusBar(text string, height float32) giu.Widget {
 	})
 
 	// Status label at the bottom
-	statusLabel := n.NewWidget(giu.Label(text)).
-		BackgroundColor(n.NewColorByName(n.ColorNames.Basic.Blue)).
-		ForegroundColor(n.NewColorByName(n.ColorNames.Vivid.Lime)).
+	statusLabel := NewWidget(giu.Label(text)).
+		BackgroundColor(NewColorByName(ColorNames.Basic.Blue)).
+		ForegroundColor(NewColorByName(ColorNames.Vivid.Lime)).
 		FontWeight("bold").
 		PaddingTop(10)
 
