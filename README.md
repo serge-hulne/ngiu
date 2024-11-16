@@ -3,7 +3,7 @@ A SwiftUI inspired GUI library for go, based on giu
 ![Screenshot 2024-11-15 at 11 57 03](https://github.com/user-attachments/assets/430cdc61-afe6-4da2-a0b9-71cf24464039)
 
 # Example of use:
-
+```
 // ############################################
 // ### Custom FormData with data input handling
 // ############################################
@@ -85,6 +85,5 @@ func (f *FormData) FormDataSubmit() {
 }
 
 //
-```
 ```
 
