@@ -2,6 +2,9 @@
 A SwiftUI inspired GUI library for go, based on giu
 ![Screenshot 2024-11-15 at 11 57 03](https://github.com/user-attachments/assets/430cdc61-afe6-4da2-a0b9-71cf24464039)
 
+![app_windows_11](https://github.com/user-attachments/assets/e019e1b4-0fe2-48bf-9eaf-92948dbde409)
+
+
 # Example of use:
 ```
 // ############################################
